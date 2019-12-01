@@ -1,0 +1,11 @@
+﻿<h1>Hi {{currentUser.gebruikersnaam}}!</h1>
+<h3>All registered users:</h3>
+<ul>
+    <li *ngFor="let gebruiker of users">
+        {{gebruiker.gebruikersnaam}} ({{gebruiker.email}} {{gebruiker.lastName}})
+        - <a (click)="deleteUser(gebruiker.gerbuikerID)" class="text-danger">Remove</a>
+        <a routerLink="/deleteUser(gebruiker.gerbuikerID" class="btn btn-link">Add friend</a>
+    </li>
+</ul>
+<button type="button" class="btn btn-outline-primary btn-lg " routerLink="polls">Create poll</button>
+<button type="button" class="btn btn-outline-primary btn-lg " routerLink="mypoll">Show polls</button>
